@@ -7,5 +7,7 @@ function insertionSort(arr) {
     arr[i] = start;
     start = temp;
   }
-  for (let j = i + 2; j < arr.length; j++) {}
+  for (let j = i + 2; j < i + 1; j++) {
+    if ()
+  }
 }
