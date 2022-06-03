@@ -10,7 +10,7 @@ function insertionSort(arr) {
         arr[j+1] = arr[j];
       }
       // insert currentVal
-      arr[j+1];
+      arr[j+1] = currentVal;
     }
   }
   return arr;
