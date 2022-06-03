@@ -10,20 +10,22 @@ function insertionSort(arr) {
       arr[i + 1] = temp;
       leftArr.unshift(arr[i + 1]);
       arr.shift(arr[i + 1]);
-      i++;
     } else {
       leftArr.unshift(arr[i]);
       arr.shift(arr[i]);
-      i++;
     }
-
-    console.log(leftArr);
-    for (let j = i + 2; j < leftArr.length; j++) {
-      if (arr[j] < arr[i + 1]) {
+    console.log(leftArr, arr);
+    for (let j = i + 1; j < leftArr.length; j++) {
+      if (arr[j] < arr[i]) {
         leftArr.unshift(arr[j]);
         arr.shift(arr[j]);
+      } else {
+        leftArr.unshift(arr[i]);
+        arr.shift(arr[i]);
       }
       // iterate through leftArr and sort into the right order
     }
   }
 }
+
+console.log(insertionSort([3, 6, 8, 2, 7, 5]));
