@@ -14,9 +14,12 @@ function insertionSort(arr) {
       leftArr.unshift(arr[i]);
       arr.shift(arr[i]);
     }
-    console.log(leftArr, arr);
+    console.log(leftArr, arr[i]);
     for (let j = i + 1; j < leftArr.length; j++) {
       if (arr[j] < arr[i]) {
+        let temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
         leftArr.unshift(arr[j]);
         arr.shift(arr[j]);
       } else {
@@ -26,6 +29,7 @@ function insertionSort(arr) {
       // iterate through leftArr and sort into the right order
     }
   }
+  return arr;
 }
 
-console.log(insertionSort([3, 6, 8, 2, 7, 5]));
+insertionSort([2, 1, 9, 76, 4]);
