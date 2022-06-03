@@ -9,6 +9,8 @@ function insertionSort(arr) {
       // iterate through leftArr and sort into the right order
         arr[j+1] = arr[j];
       }
+      // insert currentVal
+      arr[j+1];
     }
   }
   return arr;
