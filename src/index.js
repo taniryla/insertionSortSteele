@@ -5,13 +5,10 @@ function insertionSort(arr) {
   for (let i = 1; i < arr.length; i++) {
     // compare and swap
     let currentVal = arr[i];
-    for (let j = i - 1; j >= 0; j--) {
-      if (arr[i] < arr[j]) {
-        let temp = arr[j];
-        arr[j] = arr[i];
-        arr[i] = temp;
-      }
+    for (let j = i - 1; j >= 0 && arr[j] > currentVal; j--) {
       // iterate through leftArr and sort into the right order
+        arr[j+1] = arr[j];
+      }
     }
   }
   return arr;
